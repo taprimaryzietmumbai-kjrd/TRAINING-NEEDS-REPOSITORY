@@ -474,6 +474,7 @@ async function submitParticipantRecord(){
   if(!d.arrivalDate || !d.arrivalTime){status.textContent='Please enter the expected date and time of arrival.';status.className='photoStatus photoError';return;}
   if(!d.participantGender || !d.participantCategory){status.textContent='Please select Gender and Social Category.';status.className='photoStatus photoError';return;}
   if(d.teachesKritiMiddle==='Yes' && (!d.kritiMiddlePeriodCount || Number(d.kritiMiddlePeriodCount)<1)){status.textContent='Please enter the number of Middle Stage periods you teach.';status.className='photoStatus photoError';return;}
+  if(!d.kvRegion){status.textContent='Please select one of the five authorised KVS Regional Offices.';status.className='photoStatus photoError';return;}
   if(!d.kv){status.textContent='Please select the Kendriya Vidyalaya.';status.className='photoStatus photoError';return;}
   if(!d.keyFocusAreas.length){status.textContent='Please select at least one Preferred Key Area for Training.';status.className='photoStatus photoError';return;}
   if(d.mostPreferredSessions.length>20){status.textContent='Please select no more than 20 preferred sessions.';status.className='photoStatus photoError';return;}
